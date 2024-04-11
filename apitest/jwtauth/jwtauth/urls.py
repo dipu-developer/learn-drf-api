@@ -11,7 +11,7 @@ routes.register('api',views.StudentModelViewSet, basename="student")
 urlpatterns = [
     path('gettoken/',TokenObtainPairView.as_view(),name="tokenobtain"),
     path('refreshtoken/',TokenRefreshView.as_view(),name="tokenrefresh"),
-    path('verifyview',TokenVerifyView.as_view(),name="verifyuser"), # optional
+    path('verifyview/',TokenVerifyView.as_view(),name="verifyuser"), # optional
     path('admin/', admin.site.urls),
     path('',include(routes.urls)),
 ]
